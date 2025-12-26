@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>블로그 글</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcpn.com/
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/
 bootstrap/4.1.3/css/bootstrap.min.css">
 </head>
 <body>
@@ -16,6 +16,7 @@ bootstrap/4.1.3/css/bootstrap.min.css">
     <div class="row">
         <div class="col-lg-8">
             <article>
+                <input type="hidden" id="article-id" th:value="${article.id}">
                 <header class="mb-4">
                     <h1 class="fw-bolder mb-1" th:text="${article.title}"></h1>
                     <div class="text-muted fst-italic mb-2" th:text="|Posted on
@@ -25,11 +26,12 @@ ${#temporals.format(article.createdAt,'yyyy-MM-dd HH:mm')}|"></div>
                     <p class="fs-5 mb-4" th:text="${article.content}"></p>
                 </section>
                 <button type="button" class="btn btn-primary btn-sm">수정</button>
-                <button type="button"
+                <button type="button" id="delete-btn"
                         class="btn btn-secondary btn-sm">삭제</button>
             </article>
         </div>
     </div>
 </div>
+<script src="/js/article.js"></script><!-- article.js 파일 추가-->
 </body>
 </html>
