@@ -1,5 +1,5 @@
 package me.chahyunwoo.springbootdeveloper.config;
-
+/*
 import lombok.RequiredArgsConstructor;
 import me.chahyunwoo.springbootdeveloper.service.UserDetailService;
 import org.springframework.context.annotation.Bean;
@@ -72,3 +72,5 @@ public class WebSecurityConfig {
         return new BCryptPasswordEncoder();
     }
 }
+
+ */
